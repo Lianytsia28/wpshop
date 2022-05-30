@@ -9,7 +9,13 @@
         <a class="blog_txt-line">/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\</a>
         <a class="blog_txt-min"><?php the_content(); ?></a>
     </div>
-    <div class="blog_image"><img src="http://wp-shop/wp-content/uploads/2022/02/Image.png"></div>
+    <div class="blog_image">
+        <?php 
+            $image = get_field('blogimg_h', $page_id);
+            if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+        <?php endif; ?>
+    </div>
 </section>
 <section class="blog">
     <div class="container">
