@@ -86,7 +86,7 @@
     top: 0;
     width: 50px;
     height: 50px;
-    background: #ffa687;
+    background: #fd926d;
     right: calc((100vw - 1080px) / 2 + 82px);
 } 
 
@@ -129,7 +129,7 @@
     right: calc((100vw - 1080px) / 2 + 32px);
     width: 50px;
     height: 50px;
-    background: #ffa687;
+    background: #fd926d;
     position: absolute;
 }
 .slick-next:before

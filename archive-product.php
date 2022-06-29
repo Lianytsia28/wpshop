@@ -49,53 +49,10 @@ do_action( 'woocommerce_before_main_content' );
 	<?php 
 			$page_id = wc_get_page_id( 'shop' );
      ?>
-<section class="products-s">
-    <div class="container">
-        <div class="products-s_content">
-            <div class="products-slider">
-                <div class="products-slider_img">
-                    <?php  
-                    $image = get_field('products_slider-img1', $page_id);
-                    if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-                    <div class="products-slider_img_description">
-                        <h1><?php the_field('products_title', $page_id); ?></h1>
-                        <h2><?php the_field('products_price', $page_id); ?></h2>
-                        <h3><?php the_field('products_description', $page_id); ?></h3>
-                        <button>ADD TO CART +</button>
-                    </div>
-                </div>
-                <div class="products-slider_img">
-                    <?php 
-                    $image = get_field('products_slider-img2', $page_id);
-                    if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-                    <div class="products-slider_img_description">
-                        <h1><?php the_field('products_title', $page_id); ?></h1>
-                        <h2><?php the_field('products_price2', $page_id); ?></h2>
-                        <h3><?php the_field('products_description', $page_id); ?></h3>
-                        <button>ADD TO CART +</button>
-                    </div>
-                </div>
-                <div class="products-slider_img">
-                    <?php 
-                    $image = get_field('products_slider-img3', $page_id);
-                    if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-                    <div class="products-slider_img_description">
-                        <h1><?php the_field('products_title', $page_id); ?></h1>
-                        <h2><?php the_field('products_price3', $page_id); ?></h2>
-                        <h3><?php the_field('products_description', $page_id); ?></h3>
-                        <button>ADD TO CART +</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+     <?php
+        require_once ("template/sliderProducts.php");
+    ?>
+
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>

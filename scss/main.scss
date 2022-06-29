@@ -1,5 +1,5 @@
 $color_black: #000000;
-$color_orange: #ffa687;
+$color_orange: #fd926d;
 $color_white: #ffffff;
 $color_warm-grey: #beb1a5;
 $color_dim-gray: #6b6b6b;
@@ -198,19 +198,19 @@ nav ul li {
       }
       &__button button{
         position: relative;
-        background: #ffa687;
+        background: $color_orange;
         color: #ffffff;
         font-size: 16px;
-        padding: 18px 20px;
+        padding: 15px 20px;
         border-radius: 1px;
         box-shadow: 0px 4px 1px 0px #B3745F;
-        border: solid 2px #ffa687;
+        border: solid 2px $color_orange;
         cursor: pointer;
 
         &:hover{
           background: #ffffff;
-          color: #ffa687;
-          border: solid 2px #ffa687;
+          color: $color_orange;
+          border: solid 2px $color_orange;
           transition: 1s;
         }
       }
@@ -259,13 +259,13 @@ nav ul li {
 }
 .sliderShop ul li.slick-active button:before{
   font-size: 12px;
-  color: #ffa687;
+  color: $color_orange;
   z-index: 1;
 }
 // sliderShop
 
 // page_home
-.home_content{
+.first{
     position: relative;
     width: 100%;
     background: #ededed;
@@ -302,7 +302,7 @@ nav ul li {
                 }
             }
             button{
-                background: #ffa687;
+                background: $color_orange;
                 color: $color_white;
                 font-size: 28px;
                 font-weight: bold;
@@ -351,58 +351,61 @@ nav ul li {
     width: 100%;
     padding: 45px 0;
     background: $color_white;
-}
-.advertising_block{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    &_left{
-        width: 50%;
-
-        img{
-            width: 100%;
-            height: 100%;
-        }
+    &_elem {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+      &_left{
+          width: 50%;
+    
+          img{
+              width: 100%;
+              height: 100%;
+          }
+      }
+      &_right{
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+    
+          &-top{
+              width: 100%;
+              height: 50%;
+              margin: 0;
+    
+              img{
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+          &-bottom{
+              width: 100%;
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin: 0;
+    
+              &-l{
+                  width: 50%;
+                  height: 100%;
+    
+                  img{
+                      width: 100%;
+                      height: 100%;
+                  }
+              }
+          }
+      }
     }
-    &_right{
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        &-top{
-            width: 100%;
-            height: 50%;
-            margin: 0;
-
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-        &-bottom{
-            width: 100%;
-            height: 50%;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0;
-
-            &-l{
-                width: 50%;
-                height: 100%;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-    }
 }
+
+
 // advertising
 // footer
 .payment{
@@ -741,7 +744,7 @@ $color_cloud: #eaeaea;
 
     &-button{
       // background: $color_orange;
-      background: #ffa687;
+      background: $color_orange;
       background: -webkit-linear-gradient(to right, #ffa687 0%, #6B3612 100%);
       background: -moz-linear-gradient(to right, #ffa687 0%, #6B3612 100%);
       background: linear-gradient(to right, #ffa687 0%, #6B3612 100%);
@@ -867,10 +870,10 @@ $color_cloud: #eaeaea;
   .sliderShop .slick-prev{
     display: none !important;
   }
-  .advertising_block_left{
+  .advertising_elem_left{
     width: 100%;
   }
-  .advertising_block_right{
+  .advertising_elem_right{
     width: 100%;
   }
   .footer_block-l{
@@ -894,18 +897,18 @@ $color_cloud: #eaeaea;
     width: 300px;
     margin: 0 auto;
   }
-  .home_content{
+  .first{
     padding: 12px 0;
   }
-  .home_content_contact{
+  .first_contact{
     flex-wrap: wrap;
   }
-  .home_content_contact-form{
+  .first_contact-form{
     width: 100% !important;
     margin-bottom: 10px;
     justify-content: center;
   }
-  .home_content_contact-social{
+  .first_contact-social{
     width: 100%;
     justify-content: center;
   }
@@ -934,7 +937,7 @@ $color_cloud: #eaeaea;
   .woocommerce-breadcrumb{
     bottom: 50px;
   }
-  .products-s{
+  .productsSection{
     padding: 100px 0 15px 0 !important;
   }
   .wc-tabs-wrapper .wc-tabs{
@@ -949,6 +952,41 @@ $color_cloud: #eaeaea;
   .woocommerce-product-gallery{
     min-width: 320px !important;
     width: 100% !important;
+  }
+
+  .products-slider{
+    height: 350px;
+  
+    .products-slider_content{
+      height: 340px;
+      position: absolute;
+      justify-content: center;
+  
+      .products-slider_content-block{
+
+        &-nametxt{
+          background: $color_white_smoke;
+          line-height: 1 !important;
+          padding: 0 2px;
+          margin: 8px 0 !important;
+        }
+  
+        &-price{
+          line-height: 1 !important;
+          background: $color_white_smoke;
+          padding: 0 2px;
+          margin: 4px 0 !important;
+        }
+  
+        &-desc{
+          display: none;
+        }
+      }
+    }
+    .products-slider_img{
+      height: 340px;
+      width: 100% !important;
+    }
   }
 }
 
@@ -967,7 +1005,7 @@ $color_cloud: #eaeaea;
       cursor: pointer;
 			transition: background .1s ease;
 			&:hover{
-        background: #ffa687;
+        background: $color_orange;
                 color: $color_white;
                 font-weight: 600;
                 font-style: italic;
@@ -979,7 +1017,7 @@ $color_cloud: #eaeaea;
       }
 
       &.accordion-active {
-        background: #ffa687;
+        background: $color_orange;
         color: $color_white;
         font-size: 16px;
         font-weight: 600;
@@ -1045,7 +1083,7 @@ $color_cloud: #eaeaea;
 // tabs
 // carousel
 .slider-2{
-  background: #ffa687;
+  background: $color_orange;
   padding: 2px 0;
 }
 .container-caruosel{
@@ -1331,7 +1369,7 @@ a{
 // blog
 
 // products
-.products-s{
+.productsSection{
   width: 100%;
   padding: 100px 0 50px 0;
   background: #ffffff;
@@ -1344,83 +1382,100 @@ a{
 }
 .products-slider{
   width: 100%;
+  height: 380px;
   position: relative;
 
-  .products-slider_img{
-    width: 100%;
-    height: 430px;
-    position: relative;
-    display: flex;
-    justify-content: center;
+  .products-slider_content{
+    width: 40%;
+    height: 380px;
+    float: right;
+    // position: absolute;
+    // background: #cf3c2551;
 
-    img{
-      width: 60%;
-      height: 100%;
-      background-size: contain;
-      float: left;
+    .products-slider_content-block{
+      width: 100%;
+      height: 380px;
+      padding: 0 32px 0 18px;
+      float: right;
       position: relative;
-    }
-
-    &_description{
-      width: 40%;
-      height: 100%;
-      background: #ffffff;
-      position: relative;
-      float: left;
-      padding: 5px 60px 5px 15px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
 
-      h1{
+      &-nametxt{
         font-size: 24px;
-        color: #4a4a4a;
         line-height: 1;
-        margin: 0;
+        color: #4a4a4a;
+        font-family: 'Times New Roman', Times, serif;
       }
-      h2{
+
+      &-price{
+        color: $color_orange;
         font-size: 36px;
-        color: #fd926d;
-        line-height: 0.2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        line-height: 0.5;
+        margin: 10px 0 16px 0;
       }
-      h3{
+
+      &-desc{
         font-size: 12px;
+        width: 84%;
+        margin: 10px 0;
         color: #8f8f8f;
       }
-      button{
-        display: none;
-        width: 40%;
-        margin-top: 12px;
-        padding: 14px 2px;
+
+      &-button{
+        position: relative;
+        margin: 10px 0;
+        background: #fd926d;
+        color: #ffffff;
         font-size: 14px;
-        color: $color_white;
-        border: none;
-        border-radius: 5px;
+        padding: 12px 20px;
+        border-radius: 1px;
+        box-shadow: 0px 4px 1px 0px #b3745f;
+        border: solid 2px $color_orange;
         cursor: pointer;
-        background: #ffa687;
-        background: -webkit-linear-gradient(to right, #ffa687 0%, #6B3612 100%);
-        background: -moz-linear-gradient(to right, #ffa687 0%, #6B3612 100%);
-        background: linear-gradient(to right, #ffa687 0%, #6B3612 100%);
         transition: 0.5s;
-        font-weight: bold;
-        box-shadow: 2px 3px 2px 1px rgb(107 54 18 / 61%);
+
+        &:after{
+          padding-left: 5px;
+          content: "⮞";
+          font-size: 14px;
+          color: $color_white;
+          transition: 0.5s;
+        }
+
+        &:hover::after{
+          color: $color_orange;
+        }
 
         &:hover{
-          box-shadow: 3px 4px 6px 0px rgba(18, 18, 18, 1);
+          background: $color_white;
+          border: solid 2px $color_white;
+          color: $color_orange;
         }
       }
     }
   }
+  .products-slider_img{
+    height: 380px;
+    width: 60%;
+    background-size: contain;
+  }
 }
-.products-s_content ul li button:before{
+
+
+.productsSection_content ul li button:before{
   font-size: 12px;
   color: #bebebe;
   opacity: 0.8;
   z-index: 99;
 }
-.products-s_content ul li.slick-active button:before{
+.productsSection_content ul li.slick-active button:before{
   font-size: 12px;
-  color: #ffa687;
+  color: $color_orange;
   z-index: 1;
 }
 
@@ -1487,7 +1542,7 @@ ul.products li.product .price{
 a.button{
   padding: 7px 10px;
   font-size: 16px;
-  background: #ffa687;
+  background: $color_orange;
   box-shadow: 0px 4px 1px 0px #b3745f;
   color: $color_white;
   border: none;
@@ -1503,7 +1558,7 @@ a.button{
   }
 
   &:hover{
-    color: #ffa687;
+    color: $color_orange;
     background: #ffffff;
   }
 }
@@ -1599,7 +1654,7 @@ ul.products li.product .woocommerce-loop-product__link{
 }
 .price_slider_amount .button{
   font-size: 14px;
-  background: #ffa687;
+  background: $color_orange;
   box-shadow: 2px 3px 2px 1px rgba(107, 54, 18, 0.61);
   color: $color_white;
   font-weight: 600;
@@ -1614,7 +1669,7 @@ ul.products li.product .woocommerce-loop-product__link{
   }
 }
 .widget_price_filter .ui-slider-horizontal .ui-slider-range{
-  background: #ffa687;
+  background: $color_orange;
 }
 .widget_price_filter .ui-slider .ui-slider-handle{
   background: $color_orange;
@@ -1631,7 +1686,7 @@ ul.products li.product .woocommerce-loop-product__link{
   // margin: 2px 0;
 }
 .wc-block-product-search .wc-block-product-search__button{
-  background: #ffa687;
+  background: $color_orange;
   color: $color_white;
   border: $color_orange;
   transition: 1s;
@@ -1765,6 +1820,36 @@ ul.products li.product .woocommerce-loop-product__link{
 
 
 @media screen and (max-width:768px) {
+
+  .products-slider{
+    height: 350px;
+  
+    .products-slider_content{
+      height: 340px;
+  
+      .products-slider_content-block{
+        height: 340px;
+  
+        &-nametxt{
+          line-height: 0.5;
+        }
+  
+        &-price{
+          line-height: 0.1;
+          margin: 10px 0 16px 0;
+        }
+  
+        &-desc{
+          min-width: 180px;
+          margin: 5px 0;
+          object-fit: contain;
+        }
+      }
+    }
+    .products-slider_img{
+      height: 340px;
+    }
+  }
 
   .sliderShop__img{
     height: 400px;
@@ -1978,7 +2063,7 @@ ul.products li.product .woocommerce-loop-product__link{
   color: #4a4a4a;
 }
 .entry-summary .woocommerce-Price-amount{
-  color: #fd926d;
+  color: $color_orange;
   font-size: 36px;
   font-weight: bold;
   line-height: 20px;
@@ -2051,7 +2136,7 @@ ul.products li.product .woocommerce-loop-product__link{
     position: relative;
     width: 20%;
     text-align: center;
-    background: #ffa687;
+    background: $color_orange;
   }
 }
 // product-home
@@ -2062,3 +2147,4 @@ ul.products li.product .woocommerce-loop-product__link{
 .buttonFilter{
   display: none;
 }
+

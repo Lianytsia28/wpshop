@@ -52,4 +52,4 @@
 <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
 <script type="text/javascript">jssor_1_slider_init();</script>
 <script type="text/javascript"> 
-<?php get_footer() ?>
+ <?php get_footer() ?>
